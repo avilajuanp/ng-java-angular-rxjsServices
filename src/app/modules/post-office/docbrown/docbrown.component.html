@@ -1,0 +1,13 @@
+<div class="container p-3 my-3 bg-success text.white">
+    <p>Doc Brown</p>
+    <div [formGroup]="form">
+        <input class="form-control" label="Carta para Marty" formControlName="control">
+        <div class="text-start p-1">
+            <button class="btn btn-primary" (click)="sendMessage(form.controls.control.value)">Enviar Carta</button>
+        </div>
+        <div class="text-end p-1">
+            <button class="btn btn-secondary" (click)="viewMessage()">Mostrar Carta</button>
+        </div>
+        <h5 style="color:white" *ngIf="messageFromMarty">{{messageFromMarty}}</h5>
+    </div>
+</div>
